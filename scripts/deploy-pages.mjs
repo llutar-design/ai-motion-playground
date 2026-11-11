@@ -17,7 +17,7 @@ const email = out('git', ['config', 'user.email']);
 const commit = out('git', ['rev-parse', '--short', 'HEAD']);
 
 console.log(`빌드 경로: ${base}`);
-run(process.platform === 'win32' ? 'npx.cmd' : 'npx', ['vite', 'build'], { env: { ...process.env, BASE_PATH: base }, shell: process.platform === 'win32' });
+execFileSync(process.execPath, [resolve(root, 'node_modules/vite/bin/vite.js'), 'build'], { stdio: 'inherit', cwd: root, env: { ...process.env, BASE_PATH: base } });
 writeFileSync(resolve(root, 'dist/.nojekyll'), '');
 
 const dist = resolve(root, 'dist');

@@ -54,6 +54,19 @@ MediaPipe 런타임(`public/wasm`)과 모델 3종(`public/models`)은 프로젝�
 
 보물 발굴의 주제(지역 문화유산 등)는 `src/data/treasureThemes.js`에 추가합니다.
 
+## GitHub Pages 배포
+
+운영 주소: https://llutar-design.github.io/ai-motion-playground/
+
+코드를 고친 뒤 다시 배포하려면:
+
+```bash
+git push                # 소스 저장
+npm run deploy:pages    # 저장소 이름 경로로 빌드해 gh-pages 브랜치에 올림
+```
+
+1~2분 뒤 운영 주소에 반영됩니다.
+
 ## Vercel 배포
 
 ```bash
