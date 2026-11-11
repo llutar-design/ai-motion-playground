@@ -1,0 +1,25 @@
+{
+  "name": "ai-motion-playground",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "AI 모션 플레이그라운드 - 웹캠 1대로 즐기는 모션 인식 게임 플랫폼",
+  "scripts": {
+    "setup:assets": "node scripts/setup-assets.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy:pages": "node scripts/deploy-pages.mjs",
+    "test:unit": "node --test \"tests/unit/*.test.mjs\"",
+    "test:e2e": "node tests/e2e/run.mjs",
+    "test": "npm run test:unit && npm run build && npm run test:e2e"
+  },
+  "dependencies": {
+    "@fontsource/jua": "^5.2.5",
+    "@mediapipe/tasks-vision": "0.10.21"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.49.1",
+    "vite": "^6.0.7"
+  }
+}
